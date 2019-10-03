@@ -1,0 +1,30 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="Henry Farias" id="create-table-user">
+        <createTable tableName="user">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(50)"/>
+            <column name="email" type="varchar(50)"/>
+            <column name="password" type="varchar(255)"/>
+            <column name="profile_id" type="BIGINT"/>
+            <column name="created_at" type="DATE"/>
+            <column name="updated_at" type="DATE"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="profile_id"
+                                 baseTableName="user"
+                                 constraintName="fk_user_profile"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profile"/>
+
+        <rollback>
+            <dropTable tableName="user"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

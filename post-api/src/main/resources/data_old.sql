@@ -1,0 +1,16 @@
+-- INSERT INTO profile (id, name, created_at) VALUES (1, 'admin', '2019-09-27');
+-- INSERT INTO profile (id, name, created_at) VALUES (2, 'writter', '2019-09-27');
+-- INSERT INTO profile (id, name, created_at) VALUES (3, 'reader', '2019-09-27');
+--
+-- INSERT INTO role (id, name, created_at) VALUES (1, 'ROLE_POST_GRANT_ALL', '2019-09-27');
+-- INSERT INTO role (id, name, created_at) VALUES (2, 'ROLE_USER_GRANT_ALL', '2019-09-27');
+-- INSERT INTO role (id, name, created_at) VALUES (3, 'ROLE_POST_READ_WRITE', '2019-09-27');
+-- INSERT INTO role (id, name, created_at) VALUES (4, 'ROLE_POST_READ', '2019-09-27');
+--
+-- INSERT INTO profile_role (profile_id, role_id) VALUES (1, 2), (1, 1);
+--
+-- INSERT INTO user (id, email, name, password, created_at) VALUES
+-- 	(1, 'admin@mail.com', 'Admin', '$2a$10$V8tBKAhZ5ACPreHBCnos1OlE5wv0DHA.tNkXcj3p.iQ0zLOmKpY2i', '2019-09-27');
+--
+-- INSERT INTO user_profile (user_id, profile_id) VALUES (1, 1);
+

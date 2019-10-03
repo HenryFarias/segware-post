@@ -1,0 +1,50 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="Henry Farias" id="insert-inicial-profile_role">
+        <insert tableName="profile_role">
+            <column name="id">1</column>
+            <column name="profile_id">1</column>
+            <column name="role_id">1</column>
+            <column name="created_at">2019-09-27</column>
+        </insert>
+        <insert tableName="profile_role">
+            <column name="id">2</column>
+            <column name="profile_id">1</column>
+            <column name="role_id">2</column>
+            <column name="created_at">2019-09-27</column>
+        </insert>
+
+        <insert tableName="profile_role">
+            <column name="id">3</column>
+            <column name="profile_id">2</column>
+            <column name="role_id">3</column>
+            <column name="created_at">2019-09-27</column>
+        </insert>
+
+        <insert tableName="profile_role">
+            <column name="id">4</column>
+            <column name="profile_id">3</column>
+            <column name="role_id">4</column>
+            <column name="created_at">2019-09-27</column>
+        </insert>
+
+        <rollback>
+            <delete tableName="profile_role">
+                <where>id = 1</where>
+            </delete>
+            <delete tableName="profile_role">
+                <where>id = 2</where>
+            </delete>
+            <delete tableName="profile_role">
+                <where>id = 3</where>
+            </delete>
+            <delete tableName="profile_role">
+                <where>id = 4</where>
+            </delete>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

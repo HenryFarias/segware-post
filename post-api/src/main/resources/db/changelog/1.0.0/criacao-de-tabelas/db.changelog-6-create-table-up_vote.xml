@@ -1,0 +1,34 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="Henry Farias" id="create-table-up_vote">
+        <createTable tableName="up_vote">
+            <column name="id" type="BIGINT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="BIGINT"/>
+            <column name="post_id" type="BIGINT"/>
+            <column name="created_at" type="DATE"/>
+            <column name="updated_at" type="DATE"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="up_vote"
+                                 constraintName="fk_up_vote_user"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user"/>
+
+        <addForeignKeyConstraint baseColumnNames="post_id"
+                                 baseTableName="up_vote"
+                                 constraintName="fk_up_vote_post"
+                                 referencedColumnNames="id"
+                                 referencedTableName="post"/>
+
+        <rollback>
+            <dropTable tableName="up_vote"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
