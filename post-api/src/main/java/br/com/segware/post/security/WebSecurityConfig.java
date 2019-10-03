@@ -24,7 +24,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests()
-                .antMatchers("/post/**").hasAnyRole("POST_GRANT_ALL", "POST_WRITE_READ", "POST_READ")
+                .antMatchers("/post/**").hasRole("POST_GRANT_ALL")
+                .antMatchers(HttpMethod.GET, "/post").hasAnyRole("POST_WRITE_READ", "POST_READ")
+                .antMatchers(HttpMethod.POST,"/post").hasRole("POST_WRITE_READ")
+                .antMatchers(HttpMethod.POST,"/post/{id}/add/upVote").hasAnyRole("POST_WRITE_READ", "POST_READ")
+                .antMatchers(HttpMethod.POST,"/post/{id}/remove/upVote").hasAnyRole("POST_WRITE_READ", "POST_READ")
                 .antMatchers("/user/**").hasRole("USER_GRANT_ALL")
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .antMatchers(HttpMethod.POST, "/swagger-ui.html").permitAll()

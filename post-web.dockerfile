@@ -2,7 +2,7 @@ FROM mhart/alpine-node:11 AS builder
 MAINTAINER Henry Farias
 WORKDIR /app
 COPY ./post-web/. .
-#COPY . .
+RUN yarn install
 RUN yarn run build
 
 FROM mhart/alpine-node
