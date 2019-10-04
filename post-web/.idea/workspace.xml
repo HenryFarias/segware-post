@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc6ef0d1-aaf7-49e6-9b67-889ea7010855" name="Default Changelist" comment="" />
+    <list default="true" id="fc6ef0d1-aaf7-49e6-9b67-889ea7010855" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../post-api/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/../post-api/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../post-api/src/main/java/br/com/segware/post/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../post-api/src/main/java/br/com/segware/post/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../post-api/src/main/java/br/com/segware/post/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../post-api/src/main/java/br/com/segware/post/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../post-api/src/main/java/br/com/segware/post/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../post-api/src/main/java/br/com/segware/post/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../post-api/src/test/java/br/com/segware/post/controller/PostControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../post-api/src/test/java/br/com/segware/post/controller/PostControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../post-api/src/test/java/br/com/segware/post/service/AuthServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../post-api/src/test/java/br/com/segware/post/service/PostServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/axiosConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/axiosConfig.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +29,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1RegR6MeAqN97VzgPwrFmPj243C" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -56,10 +75,22 @@
       <option name="presentableId" value="Default" />
       <updated>1570032964116</updated>
       <workItem from="1570032966321" duration="10579000" />
+      <workItem from="1570160155065" duration="1730000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

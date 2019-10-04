@@ -5,6 +5,7 @@ import {Container, Logo, Nav} from "./styles";
 import {MdAssignment, MdExitToApp, MdPersonAdd} from "react-icons/md";
 import {useDispatch} from "react-redux";
 import {userActions} from "../../redux/user-reducer";
+import Can from "../Can";
 
 export default function Menu(props) {
 
@@ -23,9 +24,11 @@ export default function Menu(props) {
                 <Link to="/posts" title="Posts">
                     <MdAssignment/>
                 </Link>
-                <Link to="/users" href="#" title="Add Users">
-                    <MdPersonAdd/>
-                </Link>
+                <Can roles={'ROLE_USER_GRANT_ALL'}>
+                    <Link to="/users" href="#" title="Add Users">
+                        <MdPersonAdd/>
+                    </Link>
+                </Can>
             </Nav>
 
             <Link onClick={logoff} to="/" title="Exit">

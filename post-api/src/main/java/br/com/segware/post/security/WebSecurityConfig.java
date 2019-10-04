@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -12,6 +13,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+@EnableGlobalMethodSecurity(securedEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserDetail userDetail;
@@ -24,12 +26,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests()
-                .antMatchers("/post/**").hasRole("POST_GRANT_ALL")
-                .antMatchers(HttpMethod.GET, "/post").hasAnyRole("POST_WRITE_READ", "POST_READ")
-                .antMatchers(HttpMethod.POST,"/post").hasRole("POST_WRITE_READ")
-                .antMatchers(HttpMethod.POST,"/post/{id}/add/upVote").hasAnyRole("POST_WRITE_READ", "POST_READ")
-                .antMatchers(HttpMethod.POST,"/post/{id}/remove/upVote").hasAnyRole("POST_WRITE_READ", "POST_READ")
-                .antMatchers("/user/**").hasRole("USER_GRANT_ALL")
+//                .antMatchers("/post/**").hasRole("POST_GRANT_ALL")
+//                .antMatchers(HttpMethod.GET, "/post").hasAnyRole("POST_WRITE_READ", "POST_READ")
+//                .antMatchers(HttpMethod.POST,"/post").hasRole("POST_WRITE_READ")
+//                .antMatchers(HttpMethod.POST,"/post/{id}/add/upVote").hasAnyRole("POST_WRITE_READ", "POST_READ")
+//                .antMatchers(HttpMethod.POST,"/post/{id}/remove/upVote").hasAnyRole("POST_WRITE_READ", "POST_READ")
+//                .antMatchers("/user/**").hasRole("USER_GRANT_ALL")
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .antMatchers(HttpMethod.POST, "/swagger-ui.html").permitAll()
                 .antMatchers("/v2/api-docs", "/configuration/ui", "/swagger-resources", "/configuration/security", "/swagger-ui.html", "/webjars/**").permitAll()

@@ -22,7 +22,11 @@ export const registerAxiosInterceptors = (store) => {
         }
         return response;
     }, function (error) {
-        swal(error.response.data.msg, "", error.response.data.type);
+        if (error.response.status === 403) {
+            swal("Não autorizado", "", "error");
+            return Promise.reject(error.response);
+        }
+        swal(error.response.data ? error.response.data.msg : "Erro", "", "error");
         return Promise.reject(error.response);
     });
 };

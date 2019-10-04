@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="935fa026-9d6e-4d07-ae4d-775afd32b527" name="Default Changelist" comment="" />
+    <list default="true" id="935fa026-9d6e-4d07-ae4d-775afd32b527" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-api/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/post-api/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-api/src/main/java/br/com/segware/post/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-api/src/main/java/br/com/segware/post/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-api/src/main/java/br/com/segware/post/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-api/src/main/java/br/com/segware/post/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-api/src/main/java/br/com/segware/post/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-api/src/main/java/br/com/segware/post/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-api/src/test/java/br/com/segware/post/controller/PostControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-api/src/test/java/br/com/segware/post/controller/PostControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-api/src/test/java/br/com/segware/post/service/AuthServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-api/src/test/java/br/com/segware/post/service/PostServiceTest.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +51,9 @@
       <updated>1570020444190</updated>
       <workItem from="1570020446755" duration="870000" />
       <workItem from="1570028582100" duration="159000" />
+      <workItem from="1570073795850" duration="244000" />
+      <workItem from="1570160201108" duration="192000" />
+      <workItem from="1570163733366" duration="516000" />
     </task>
     <servers />
   </component>

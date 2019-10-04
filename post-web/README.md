@@ -1,10 +1,14 @@
-Ver ainda:
+# POST-WEB
 
-- Layout do Post sem nada - ok
-- Formik no adicionar Post - ok
-- scroll infinito - ok
-- crud de usuários
-- excluir post
-- número de likes - ok (arrumar layout)
-- ação/efeito do like e deslike - ok
-- logout - ok
+**Pré-requisitos:**
+
+- Serviço back-end rodando na porta 8080
+- Node instalado
+
+**Comandos necessários para instalar a aplicação:**
+
+`npm i`
+
+**Iniciar aplicação:**
+
+`npm start`

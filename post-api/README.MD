@@ -1,34 +1,17 @@
-# **FALTA**:
+# POST-API
 
-**QUINTA:**
-- docker - ok
-- swagger - falta o login
-- testes
+**Pré-requisitos:**
 
-**SEXTA:**
-- liquibase - ok
-- cloud function para verificar se post tem palavrão - ok
+Ambiente Java 8 ou posterior instalado com Maven
 
-**SÁBADO:**
-- mensageria para pegar essa verificação de palavrão
-- colocar rabbit no docker
-- Categoria de post
+**Comandos necessários para instalar a aplicação:**
 
-**DOMINGO:**
-- Adicionar redux no frontend - ok
-- Ajustar frontend(criar rotas, conectar com api, autenticação) - ok
+`mvn clean install`
 
-**SEGUNDA:**
-- push notification para cada like no post do usuário
-- adicionar frontend na docker - ok
+`java -jar -Dspring.profiles.active=prod target/post-0.0.1-SNAPSHOT.jar`
 
+**Documentação**
 
-**TERÇA:**
-- fazer documento de entrega no README
-- rollback no liquibase - ok
-- não rodar liquibase nos testes
+A documentação da api se encontra no caminho abaixo:
 
-
-# **NÃO VAI ROLAR**:
-- Spring Data Rest
-- Specifications
+http://localhost:8080/swagger-ui.html

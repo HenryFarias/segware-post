@@ -18,6 +18,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -47,8 +48,8 @@ public class PostController {
                         "Ordenação Deafault é por upVote ")
     })
     @ApiOperation(value = "Listagem com paginação de posts")
-
     @GetMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @Secured({"ROLE_POST_GRANT_ALL", "ROLE_POST_WRITE_READ", "ROLE_POST_READ"})
     public InfiniteScrollPage<PostListResponse> list(
         @PageableDefault(page = 0, size = 5)
         InfiniteScrollPageable pageable) {
@@ -60,6 +61,7 @@ public class PostController {
     @ApiOperation(value = "Salvar posts")
     @PostMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
+    @Secured({"ROLE_POST_GRANT_ALL", "ROLE_POST_WRITE_READ"})
     public void save(@RequestBody @Valid PostSaveRequest request) throws UnirestException, IOException {
         this.service.save(modelMapper.map(request, Post.class));
     }
@@ -67,6 +69,7 @@ public class PostController {
     @ApiOperation(value = "Adicionar um upVote ao post")
     @PostMapping(value = "/{id}/add/upVote", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseStatus(HttpStatus.OK)
+    @Secured({"ROLE_POST_GRANT_ALL", "ROLE_POST_WRITE_READ", "ROLE_POST_READ"})
     public void addUpVote(@PathVariable Long id) {
         this.service.addUpVote(id);
     }
@@ -74,6 +77,7 @@ public class PostController {
     @ApiOperation(value = "Retirar um upVote do post")
     @PostMapping(value = "/{id}/remove/upVote", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseStatus(HttpStatus.OK)
+    @Secured({"ROLE_POST_GRANT_ALL", "ROLE_POST_WRITE_READ", "ROLE_POST_READ"})
     public void removeUpVote(@PathVariable Long id) {
         this.service.removeUpVote(id);
     }
@@ -81,6 +85,7 @@ public class PostController {
     @ApiOperation(value = "Excluir post")
     @DeleteMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
+    @Secured("ROLE_POST_GRANT_ALL")
     public void delete(@PathVariable Long id) {
         this.service.delete(id);
     }

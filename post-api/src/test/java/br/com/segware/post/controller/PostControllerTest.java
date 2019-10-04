@@ -84,7 +84,6 @@ public class PostControllerTest {
     public void deletePostSuccess() {
         Mockito.doNothing().when(service).delete(10L);
         ResponseEntity<String> response  = testRestTemplate.exchange("/post/10", HttpMethod.DELETE, null, String.class);
-//        ResponseEntity<String> responseEntity = this.testRestTemplate.delete("/1");
         Assert.assertEquals(HttpStatus.OK, response.getStatusCode());
     }
 }

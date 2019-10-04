@@ -10,10 +10,10 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.PropertyMap;
-import org.modelmapper.TypeMap;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -39,6 +39,7 @@ public class UserController {
     @ApiOperation(value = "Salvar usuário")
     @PostMapping(produces = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
+    @Secured("ROLE_POST_GRANT_ALL")
     public void save(@RequestBody @Valid UserInsertRequest userRequest) {
         ModelMapper modelMapper = new ModelMapper();
         Profile profile = profileService.findById(userRequest.getProfileId());
@@ -54,6 +55,7 @@ public class UserController {
     @ApiOperation(value = "Listar todos os usuário")
     @GetMapping(produces = "application/json")
     @ResponseStatus(HttpStatus.OK)
+    @Secured("ROLE_POST_GRANT_ALL")
     public List<UserResponse> get() {
         Type targetListType = new TypeToken<List<UserResponse>>() {}.getType();
         List<User> users = this.service.findAll();
